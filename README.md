@@ -85,6 +85,21 @@ GPIO48 (I2C SCL)   ─── SCL
 
 ---
 
+## Primeiro Acesso
+
+1. Ligue o ESP32 à alimentação — ele iniciará no **modo Access Point (AP)**
+2. Conecte-se à rede Wi-Fi **`NODE32-HUB`** com a senha **`node32hub`**
+3. Abra o navegador e aceda a **`http://192.168.4.1`**
+4. Faça login na interface web com:
+   - **Utilizador:** `root`
+   - **Palavra-passe:** `root`
+5. Vá a **Configurações → Wi-Fi** e conecte o dispositivo à sua rede local
+6. Após conectar à rede, o IP será mostrado no monitor série (OLED, se disponível) — use esse IP para aceder daí em diante
+
+> O AP permanece ativo mesmo após configurar o Wi-Fi, servindo como fallback. Consulte o painel lateral "Acessos" para gerir sessões e permissões.
+
+---
+
 ## License
 
 Same as Node32-HUB — see the [main repository](https://github.com/nasp2000/Node32-HUB).
