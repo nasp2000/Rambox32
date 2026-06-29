@@ -9,9 +9,13 @@ Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon P
 ## Features
 
 ### Communication
-- **RS232 + Unikon** — connect directly to Unikon pigeon-racing timing/ring-reading equipment at 9600 baud.
-- **Email alerts** — SMTP TLS support for automatic notifications.
-- **Web UI** — full configuration, live monitoring, and event log from any browser.
+
+Read-only terminal — listens to the Unikon bus and logs all received data. Does not send commands.
+
+- **Chegas (arrivals)** — records pigeon arrival timestamps and ring numbers
+- **Provas (races)** — captures race metadata, release points, and competition results
+- **Pombal (loft)** — logs loft configuration and bird registration data
+- **Email alerts** — automatic notifications via SMTP TLS on new arrivals or errors
 
 ### Web UI
 
