@@ -62,7 +62,7 @@ GPIO1  (I2C SDA)   ─── SDA
 GPIO2  (I2C SCL)   ─── SCL
 ```
 
-> **⚠️ Importante:** No lado do Unikon, os pinos **9 e 5 do DB9 devem estar ligados (jumper)** — sem esta ligação o Unikon não comunica.
+> **⚠️ Important:** The Unikon DB9 connector requires pins **9 and 5 to be jumpered** — the device will not communicate without this connection.
 
 ---
 
