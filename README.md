@@ -36,9 +36,9 @@ The control panel runs entirely in the browser — all rendering and data proces
 
 ## Hardware Recommendation
 
-[**ESP32-S3 N16R8 DevKit**](https://www.waveshare.com/esp32-s3-n16r8.htm)
+**ESP32-S3 N16R8** (any generic devkit with 8 MB PSRAM).
 
-The only tested board. Built-in PSRAM (8 MB) and WiFi. OLED and RS232 via MAX3232 are optional.
+The only tested class of board. PSRAM is required. OLED and RS232 via MAX3232 are optional.
 
 ---
 
