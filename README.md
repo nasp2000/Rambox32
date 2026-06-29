@@ -95,6 +95,7 @@ GPIO48 (I2C SCL)   ─── SCL
    - **Password:** `root`
 5. Go to **Settings → Wi-Fi** and connect the device to your local network
 6. Once connected, the device IP will be shown on the serial monitor (or OLED, if available) — use that IP from then on
+7. **Configure email alerts** — go to **Settings → Email** and set up your SMTP server. This is essential: the Rambox32 sends email notifications when a pigeon arrives. Without email, arrivals are only visible on the web UI.
 
 > The AP is disabled once the device stabilises on a Wi-Fi network (STA), keeping the radio focused on client traffic. If the device loses connection to the network, it reactivates AP mode automatically.
 
