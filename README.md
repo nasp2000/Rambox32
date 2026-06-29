@@ -85,18 +85,18 @@ GPIO48 (I2C SCL)   ─── SCL
 
 ---
 
-## Primeiro Acesso
+## First Access
 
-1. Ligue o ESP32 à alimentação — ele iniciará no **modo Access Point (AP)**
-2. Conecte-se à rede Wi-Fi **`NODE32-HUB`** com a senha **`12345678`**
-3. Abra o navegador e aceda a **`http://192.168.4.1`**
-4. Faça login na interface web com:
-   - **Utilizador:** `root`
-   - **Palavra-passe:** `root`
-5. Vá a **Configurações → Wi-Fi** e conecte o dispositivo à sua rede local
-6. Após conectar à rede, o IP será mostrado no monitor série (OLED, se disponível) — use esse IP para aceder daí em diante
+1. Power up the ESP32 — it will boot in **Access Point (AP) mode**
+2. Connect to the Wi-Fi network **`NODE32-HUB`** with password **`12345678`**
+3. Open a browser and go to **`http://192.168.4.1`**
+4. Log in to the web interface with:
+   - **User:** `root`
+   - **Password:** `root`
+5. Go to **Settings → Wi-Fi** and connect the device to your local network
+6. Once connected, the device IP will be shown on the serial monitor (or OLED, if available) — use that IP from then on
 
-> O AP permanece ativo mesmo após configurar o Wi-Fi, servindo como fallback. Consulte o painel lateral "Acessos" para gerir sessões e permissões.
+> The AP remains active even after Wi-Fi is configured, serving as a fallback. Use the "Acessos" sidebar panel to manage sessions and permissions.
 
 ---
 
