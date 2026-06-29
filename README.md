@@ -62,8 +62,8 @@ ESP32-S3 N16R8          OLED SSD1306 (optional)
 ─────────────────       ───────────────────────
 3.3V                ─── VCC
 GND                 ─── GND
-GPIO1  (I2C SDA)   ─── SDA
-GPIO2  (I2C SCL)   ─── SCL
+GPIO21 (I2C SDA)   ─── SDA
+GPIO48 (I2C SCL)   ─── SCL
 ```
 
 > **⚠️ Important:** The Unikon DB9 connector requires pins **9 and 5 to be jumpered** — the device will not communicate without this connection.
