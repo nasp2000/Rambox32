@@ -2,14 +2,14 @@
 
 **Pigeon-racing timing terminal firmware for ESP32-S3 N16R8** — part of the [Node32-HUB](https://github.com/nasp2000/Node32-HUB) project.
 
-Connects to Unikon electronic timing equipment via **RS232** (9600 baud), with email alerts, OLED display, OTA updates, and a web-based control panel. Features automatic XON/XOFF flow control and live pigeon-arrival monitoring.
+Connects to Unikon electronic timing equipment via **RS232** (9600 baud), with email alerts, optional OLED display, OTA updates, and a web-based control panel with live pigeon-arrival monitoring.
 
 ---
 
 ## Features
 
 ### Communication
-- **RS232 + Unikon** — connect directly to Unikon pigeon-racing timing/ring-reading equipment at 9600 baud with XON/XOFF flow control.
+- **RS232 + Unikon** — connect directly to Unikon pigeon-racing timing/ring-reading equipment at 9600 baud.
 - **Email alerts** — SMTP TLS and Google Apps Script support for automatic notifications.
 - **Web UI** — full configuration, live monitoring, and event log from any browser.
 
@@ -23,9 +23,8 @@ The control panel runs entirely in the browser — all rendering and data proces
 - OTA firmware updates
 - LCD status display (OLED 0.96")
 
-### Display
-- **OLED screen** — real-time status dashboard showing clock, date, and recent pigeon arrivals.
-- Dedicated Rambox watch-style layout with compact status bar and rotating bottom lines.
+### Display (optional)
+- **OLED screen** — real-time status dashboard showing clock, date, and recent pigeon arrivals. Not required for operation.
 
 ### Reliability
 - Watchdog timer and crash recovery
@@ -39,7 +38,7 @@ The control panel runs entirely in the browser — all rendering and data proces
 
 [**ESP32-S3 N16R8 DevKit**](https://www.waveshare.com/esp32-s3-n16r8.htm)
 
-The only tested board. Built-in PSRAM (8 MB), OLED I2C interface, RS232 via MAX3232, and WiFi for web UI and email.
+The only tested board. Built-in PSRAM (8 MB) and WiFi. OLED and RS232 via MAX3232 are optional.
 
 ---
 
