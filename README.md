@@ -4,7 +4,7 @@
 
 Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon Profi**. Connects via RS232 (9600 baud), with email alerts, optional OLED display, OTA updates, and a web-based control panel with live pigeon-arrival monitoring.
 
-![Rambox32 web UI](image/rambox32_page.png)
+![Rambox32 web UI](image/banner.png)
 
 📷 [More screenshots](image/)
 
