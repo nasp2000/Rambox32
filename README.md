@@ -10,11 +10,13 @@ Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon P
 
 ### Communication
 
-Read-only terminal — listens to the Unikon bus and logs all received data. Does not send commands.
+Read-only terminal — listens to the Unikon bus and logs all received data. Does not send commands. Arrivals are detected via **polling** — the system continuously queries the clock and records new timestamps and ring numbers as they appear.
 
-- **Chegas (arrivals)** — records pigeon arrival timestamps and ring numbers
-- **Provas (races)** — captures race metadata, release points, and competition results
-- **Pombal (loft)** — logs loft configuration and bird registration data
+> **The fancier does not need to be at the loft** — as soon as a pigeon arrives, the system captures the data and sends an email alert automatically.
+
+- **Arrivals** — pigeon arrival timestamps and ring numbers
+- **Races** — race metadata, release points, and competition results
+- **Loft** — loft configuration and bird registration data
 - **Email alerts** — automatic notifications via SMTP TLS on new arrivals or errors
 
 ### Web UI
