@@ -88,7 +88,7 @@ GPIO48 (I2C SCL)   ─── SCL
 ## Primeiro Acesso
 
 1. Ligue o ESP32 à alimentação — ele iniciará no **modo Access Point (AP)**
-2. Conecte-se à rede Wi-Fi **`NODE32-HUB`** com a senha **`node32hub`**
+2. Conecte-se à rede Wi-Fi **`NODE32-HUB`** com a senha **`12345678`**
 3. Abra o navegador e aceda a **`http://192.168.4.1`**
 4. Faça login na interface web com:
    - **Utilizador:** `root`
