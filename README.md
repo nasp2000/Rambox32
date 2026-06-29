@@ -96,7 +96,7 @@ GPIO48 (I2C SCL)   ─── SCL
 5. Go to **Settings → Wi-Fi** and connect the device to your local network
 6. Once connected, the device IP will be shown on the serial monitor (or OLED, if available) — use that IP from then on
 
-> The AP remains active even after Wi-Fi is configured, serving as a fallback. Use the "Acessos" sidebar panel to manage sessions and permissions.
+> The AP is disabled once the device stabilises on a Wi-Fi network (STA), keeping the radio focused on client traffic. If the device loses connection to the network, it reactivates AP mode automatically.
 
 ---
 
