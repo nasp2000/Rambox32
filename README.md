@@ -51,6 +51,7 @@ GPIO17 (UART2 TX)  ───  T1IN  (TTL in)
                     T1OUT ───────────────────  Pin 2 (TX)
                     R1IN  ───────────────────  Pin 3 (RX)
                     GND   ───────────────────  Pin 5 (GND)
+                                               Pin 9 ───── Pin 5  ⚠️ jumper obrigatório
 
 
 ESP32-S3 N16R8          OLED SSD1306 (optional)
@@ -60,6 +61,8 @@ GND                 ─── GND
 GPIO1  (I2C SDA)   ─── SDA
 GPIO2  (I2C SCL)   ─── SCL
 ```
+
+> **⚠️ Importante:** No lado do Unikon, os pinos **9 e 5 do DB9 devem estar ligados (jumper)** — sem esta ligação o Unikon não comunica.
 
 ---
 
