@@ -19,9 +19,9 @@ Read-only terminal — listens to the Unikon bus and logs all received data. Doe
 > **The fancier does not need to be at the loft** — as soon as a pigeon arrives, the system captures the data and sends an email alert automatically.
 
 - **Arrivals** — pigeon arrival timestamps and ring numbers
-- **Races** — race metadata, release points, and competition results
+- **Races** — race metadata
 - **Loft** — loft configuration and bird registration data
-- **Email alerts** — automatic notifications via SMTP TLS on new arrivals or errors
+- **Email alerts** — automatic notifications via SMTP TLS on new arrivals
 
 ### Web UI
 
@@ -45,11 +45,11 @@ Read-only terminal — listens to the Unikon bus and logs all received data. Doe
 
 ## Hardware Recommendation
 
-**ESP32-S3 N16R8** (any generic devkit with 8 MB PSRAM).
-
-The only tested class of board.
+- **ESP32-S3 N16R8** (any generic devkit with 8 MB PSRAM).
 - **MAX3232** — RS232 transceiver for Unikon communication
 - **OLED 0.96" (SSD1306)** — optional I2C display for real-time status
+- RS232 Cable
+
 
 ### Wiring
 
@@ -80,7 +80,7 @@ GPIO48 (I2C SCL)   ─── SCL
 
 1. Flash the pre-built binary to your ESP32-S3 N16R8 (binaries in Releases) using [webflasher_Node32-HUB](https://github.com/nasp2000/webflasher_Node32-HUB). For future updates use **OTA** at `http://<esp32-ip>/ota`
 2. Connect the Unikon timing equipment to the RS232 port (UART2, 9600 baud)
-3. Open `http://<esp32-ip>` in a browser
+3. Open `http://rambox32.local` in a browser (mDNS) or `http://<esp32-ip>`
 4. Configure WiFi, email, and Unikon settings via the web UI
 
 ---
@@ -94,7 +94,7 @@ GPIO48 (I2C SCL)   ─── SCL
    - **User:** `root`
    - **Password:** `root`
 5. Go to **Settings → Wi-Fi** and connect the device to your local network
-6. Once connected, the device IP will be shown on the serial monitor (or OLED, if available) — use that IP from then on
+6. Once connected, the device is reachable at `http://rambox32.local` (mDNS) or the IP shown on the serial monitor (or OLED, if available) — use that from then on
 7. **Configure email alerts** — go to **Settings → Email** and set up your SMTP server. This is essential: the Rambox32 sends email notifications when a pigeon arrives. Without email, arrivals are only visible on the web UI.
 
 > The AP is disabled once the device stabilises on a Wi-Fi network (STA), keeping the radio focused on client traffic. If the device loses connection to the network, it reactivates AP mode automatically.
