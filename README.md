@@ -6,7 +6,7 @@ Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon P
 
 <table>
   <tr>
-    <td width="50%"><img src="image/banner.png" width="100%" alt="Rambox32 web UI"></td>
+    <td width="50%"><img src="image/email.png" width="100%" alt="Rambox32 email page"></td>
     <td width="50%"><img src="image/rambox32_home.png" width="100%" alt="Rambox32 home page"></td>
   </tr>
 </table>
