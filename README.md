@@ -2,7 +2,9 @@
 
 **Pigeon-racing timing terminal firmware for ESP32-S3 N16R8** — part of the [Node32-HUB](https://github.com/nasp2000/Node32-HUB) project.
 
-Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon Profi**. Connects via RS232 (9600 baud), with email alerts, optional OLED display, OTA updates, and a web-based control panel with live pigeon-arrival monitoring.
+Connects to vintage pigeon-racing timing equipment over RS232 (9600 baud): **Unikon** clocks (**Champ** and **Profi**) and, as an **experimental** driver, **Bricon** loft modules. Email alerts, optional OLED display, OTA updates and a web-based control panel with live arrival monitoring.
+
+> **One module at a time.** The firmware talks to either the Unikon clock or the Bricon loft module — never both. Selecting a module applies that module's RS232 profile automatically.
 
 <table>
   <tr>
@@ -19,7 +21,7 @@ Compatible with vintage Unikon timing clocks — **Unikon Champ** and **Unikon P
 
 ### Communication
 
-Read-only terminal — listens to the Unikon bus and logs all received data. Does not send commands. Arrivals are detected via **polling** — the system continuously queries the clock and records new timestamps and ring numbers as they appear.
+**Unikon (stable)** — listens to the Unikon bus and logs everything it sees. Arrivals are detected via **polling**: the system continuously queries the clock and records new timestamps and ring numbers as they appear. Training/allocation writes are available but the clock is treated as **read-only by default** — a write is always explicit.
 
 > **The fancier does not need to be at the loft** — as soon as a pigeon arrives, the system captures the data and sends an email alert automatically.
 
@@ -28,12 +30,17 @@ Read-only terminal — listens to the Unikon bus and logs all received data. Doe
 - **Loft** — loft configuration and bird registration data
 - **Email alerts** — automatic notifications via SMTP TLS on new arrivals
 
+**Bricon (experimental)** — loft-module driver rebuilt from a serial capture: `ActivateMaster`/`BA` scan, `GetFancier` → `GetPigeon` chain → `GetTimer`, `GetFlightNames` and `GetBandTable`.
+
+> ⚠️ **Experimental:** the wire layer is implemented and covered by native tests, but it has **not been validated against real Bricon hardware** yet. Test it on a spare module before relying on it for a race.
+
 ### Web UI
 
+- Unified **RAMBOX** page with a device selector (Unikon / Bricon) and live RS232 state
 - Live RS232 data reception and transmission log
 - Unikon terminal interface
 - Machine status and event monitoring
-- Email configuration and testing
+- Email configuration and testing — HTML tables with computed column widths, so results stay aligned in any client
 - OTA firmware updates
 - LCD status display (OLED 0.96")
 
@@ -84,9 +91,9 @@ GPIO48 (I2C SCL)   ─── SCL
 ## Quick start
 
 1. Flash the pre-built binary to your ESP32-S3 N16R8 (binaries in Releases) using [webflasher_Node32-HUB](https://github.com/nasp2000/webflasher_Node32-HUB). For future updates use **OTA** at `http://<esp32-ip>/ota`
-2. Connect the Unikon timing equipment to the RS232 port (UART2, 9600 baud)
+2. Connect the timing equipment to the RS232 port (UART2, 9600 baud)
 3. Open `http://rambox32.local` in a browser (mDNS) or `http://<esp32-ip>`
-4. Configure WiFi, email, and Unikon settings via the web UI
+4. On the **RAMBOX** page, pick the timing module — **Unikon** (stable) or **Bricon** (experimental) — then configure WiFi and email in **Settings**
 
 ---
 
